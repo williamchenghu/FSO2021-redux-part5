@@ -99,3 +99,21 @@ A good model for the reducer is the [redux-notes](https://fullstackopen.com/en/p
 Now implement the actual functionality of the application.
 
 Note that since all the code is in the file _index.js_ and you might need to manually reload the page after each change since the automatic reloading of the browser content does not always work for that file!
+
+## Exercises 6.3.-6.8.
+
+Let's make a new version of the anecdote voting application from part 1. Take the project from this repository [https://github.com/fullstack-hy2020/redux-anecdotes](https://github.com/fullstack-hy2020/redux-anecdotes) to base your solution on.
+
+If you clone the project into an existing git-repository, remove the _git-configuration_ of the cloned application:
+
+```bash
+cd redux-anecdotes  // go to the cloned repository
+rm -rf .git
+```
+
+The application can be started as usual, but you have to install the dependencies first:
+
+```bash
+npm install
+npm start
+```

@@ -1,27 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
-import reducer from './reducer'
+import { Provider } from 'react-redux'
+import unicafeReducer from './reducers/unicafeReducer'
+import UnicafeApp from './UnicafeApp'
+import anecdoteReducer from './reducers/anecdoteReducer'
+import AnecdoteApp from './AnecdoteApp'
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const unicafeStore = createStore(unicafeReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const anecdoteStore = createStore(anecdoteReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
-const App = () => {
-  return (
-    <div>
-      <button onClick={() => store.dispatch({ type: 'GOOD' })}>good</button>
-      <button onClick={() => store.dispatch({ type: 'OK' })}>ok</button>
-      <button onClick={() => store.dispatch({ type: 'BAD' })}>bad</button>
-      <button onClick={() => store.dispatch({ type: 'ZERO' })}>reset stats</button>
-      <div>good {store.getState().good}</div>
-      <div>ok {store.getState().ok}</div>
-      <div>bad {store.getState().bad}</div>
-    </div >
-  )
-}
-
-const renderApp = () => {
-  ReactDOM.render(<App />, document.getElementById('root'))
-}
-
-renderApp()
-store.subscribe(renderApp)
+ReactDOM.render(
+  <>
+    <Provider store={unicafeStore}>
+      <UnicafeApp />
+    </Provider>
+    <Provider store={anecdoteStore}>
+      <AnecdoteApp />
+    </Provider>
+  </>,
+  document.getElementById('root')
+)
