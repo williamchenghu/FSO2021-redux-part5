@@ -117,3 +117,7 @@ The application can be started as usual, but you have to install the dependencie
 npm install
 npm start
 ```
+
+### Step 3
+
+Implement the functionality for voting anecdotes. The amount of votes must be saved to a Redux-store.
