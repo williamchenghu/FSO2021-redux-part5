@@ -121,3 +121,9 @@ npm start
 ### Step 3
 
 Implement the functionality for voting anecdotes. The amount of votes must be saved to a Redux-store.
+
+### Step 4
+
+Implement the functionality for adding new anecdotes.
+
+You can keep the form uncontrolled, like we did [earlier](https://fullstackopen.com/en/part6/flux_architecture_and_redux#uncontrolled-form).
