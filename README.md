@@ -131,3 +131,11 @@ You can keep the form uncontrolled, like we did [earlier](https://fullstackopen.
 ### Step 5
 
 Make sure that the anecdotes are ordered by the number of votes.
+
+### Step 6
+
+If you haven't done so already, separate the creation of action-objects to [action creator](https://read.reduxbook.com/markdown/part1/04-action-creators.html)-functions and place them in the _src/reducers/anecdoteReducer.js_ file, so do like we have been doing since the chapter [action creators](https://fullstackopen.com/en/part6/flux_architecture_and_redux#action-creators).
+
+### Step 7
+
+Separate the creation of new anecdotes into its own component called _AnecdoteForm_. Move all logic for creating a new anecdote into this new component.
