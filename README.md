@@ -168,3 +168,40 @@ export default App;
 ### Step 9
 
 Install Redux Toolkit for the project. Move the Redux store creation into its own file _store.js_ and use Redux Toolkit's `configureStore` to create the store. Also, start using Redux DevTools to debug the application's state easier.
+
+### Step 10
+
+The application has a ready-made body for the _Notification_ component:
+
+```javascript
+const Notification = () => {
+  const style = {
+    border: 'solid',
+    padding: 10,
+    borderWidth: 1,
+  };
+  return <div style={style}>render here notification...</div>;
+};
+
+export default Notification;
+```
+
+Extend the component so that it renders the message stored in the Redux store, making the component take the following form:
+
+```javascript
+import { useSelector } from 'react-redux';
+
+const Notification = () => {
+  const notification = useSelector(/* something here */);
+  const style = {
+    border: 'solid',
+    padding: 10,
+    borderWidth: 1,
+  };
+  return <div style={style}>{notification}</div>;
+};
+```
+
+You will have to make changes to the application's existing reducer. Create a separate reducer for the new functionality by using the Redux Toolkit's `createSlice` function. Also, refactor the application so that it uses a combined reducer as shown in this part of the course material.
+
+The application does not have to use the _Notification_ component in an intelligent way at this point in the exercises. It is enough for the application to display the initial value set for the message in the _notificationReducer_.
