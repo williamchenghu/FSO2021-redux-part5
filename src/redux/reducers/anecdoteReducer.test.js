@@ -15,7 +15,7 @@ describe('anecdote reducer', () => {
 
   it('increase the votes by 1', () => {
     const action = {
-      type: 'VOTE_INCREMENT',
+      type: 'anecdotes/voteIncrement',
       payload: 0
     }
 
@@ -25,9 +25,9 @@ describe('anecdote reducer', () => {
     expect(target.votes).toEqual(initialState.find(e => e.id === action.payload).votes + 1)
   })
 
-  it.only('adds a new anecdote to the list', () => {
+  it('adds a new anecdote to the list', () => {
     const action = {
-      type: 'ANECDOTE_ADD',
+      type: 'anecdotes/anecdoteAdd',
       payload: 'test anecdote to be added.'
     }
 
