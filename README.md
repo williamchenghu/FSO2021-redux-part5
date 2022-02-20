@@ -211,3 +211,30 @@ The application does not have to use the _Notification_ component in an intellig
 Extend the application so that it uses the _Notification_ component to display a message for five seconds when the user votes for an anecdote or creates a new anecdote.
 
 It's recommended to create separate [action creators](https://redux-toolkit.js.org/api/createSlice#reducers) for setting and removing notifications.
+
+### Step 12
+
+Implement filtering for the anecdotes that are displayed to the user.
+
+Store the state of the filter in the redux store. It is recommended to create a new reducer and action creators for this purpose. Implement the reducer and action creators using the Redux Toolkit's `createSlice` function.
+
+Create a new _Filter_ component for displaying the filter. You can use the following code as a template for the component:
+
+```javascript
+const Filter = () => {
+  const handleChange = (event) => {
+    // input-field value is in variable event.target.value
+  };
+  const style = {
+    marginBottom: 10,
+  };
+
+  return (
+    <div style={style}>
+      filter <input onChange={handleChange} />
+    </div>
+  );
+};
+
+export default Filter;
+```
