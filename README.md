@@ -246,3 +246,7 @@ export default Filter;
 When the application launches, fetch the anecdotes from the backend implemented using json-server.
 
 As the initial backend data, you can use, e.g. [this](https://github.com/fullstack-hy2020/misc/blob/master/anecdotes.json).
+
+### Step 14
+
+Modify the creation of new anecdotes, such that the anecdotes are stored in the backend.
