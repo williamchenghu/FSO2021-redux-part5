@@ -1,4 +1,4 @@
-# FullStackOpen2021-backend
+# FullStackOpen2021-Redux
 
 Redux exercises (part6) of Full Stack Open 2021.
 
@@ -285,3 +285,11 @@ dispatch(setNotification(`you voted '${anecdote.content}'`, 10));
 The first parameter is the text to be rendered and the second parameter is the time to display the notification given in seconds.
 
 Implement the use of this improved notification in your application.
+
+## Exercises 6.19.-6.21.
+
+### Step 19
+
+The _redux store_ is currently being accessed by the components through the `useSelector` and `useDispatch` hooks.
+
+Modify the _Notification_ component so that it uses the `connect` function instead of the hooks.
