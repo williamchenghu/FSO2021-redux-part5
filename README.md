@@ -293,3 +293,7 @@ Implement the use of this improved notification in your application.
 The _redux store_ is currently being accessed by the components through the `useSelector` and `useDispatch` hooks.
 
 Modify the _Notification_ component so that it uses the `connect` function instead of the hooks.
+
+### Step 20
+
+Do the same for the _Filter_ and _AnecdoteForm_ components.
