@@ -260,3 +260,7 @@ Modify the initialization of Redux store to happen using asynchronous action cre
 ### Step 16
 
 Also modify the creation of a new anecdote to happen using asynchronous action creators, made possible by the Redux Thunk library.
+
+### Step 17
+
+Voting does not yet save changes to the backend. Fix the situation with the help of the Redux Thunk library.
