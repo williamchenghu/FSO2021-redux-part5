@@ -5,6 +5,7 @@ import { setNotification } from '../redux/reducers/notificaitonReducer'
 
 const AnecdoteList = () => {
   const anecdotes = useSelector(state => state.anecdotes)
+  const notifications = useSelector(state => state.notifications)
   const anecdotesSortByVotes = [...anecdotes].sort((a, b) => b.votes - a.votes)
   const filter = useSelector(state => state.filter)
   const dispatch = useDispatch()
@@ -22,7 +23,7 @@ const AnecdoteList = () => {
               has {anecdote.votes}
               <button onClick={() => {
                 dispatch(updateAnecdoteVote(anecdote))
-                dispatch(setNotification(`you voted '${anecdote.content}'`, 10))
+                dispatch(setNotification(`you voted '${anecdote.content}'`, 5, notifications.removal))
               }}>vote</button>
             </div>
           </div>
